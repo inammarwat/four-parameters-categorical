@@ -11,7 +11,17 @@ execute:
 
 library(tidyverse)
 library(primer.data)
+library(tidymodels)
+library(broom)
 ```
 
-Voting behavior is influenced by many demographic factors, with gender often playing a central role in political preferences. Using data from the 1992 American National Election Studies survey, which includes 46,838 observations from across the United States, we examine how voting choices for Clinton, Bush, and Perot varied between men and women.
+Understanding how voter preference varies by gender can help candidates tailor their campaign strategies more effectively. Using data from the 1992 National Election Studies survey, we explore the relationship between voter choice and sex in the U.S. presidential election. A potential limitation of our model is that survey respondents may not fully reflect the broader voting population, which could affect the generalizability of our findings.
+
+
+$$
+P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \beta_{kn} X_n}}{\sum_{j=1}^{K} e^{\beta_{j0} + \beta_{j1} X_1 + \beta_{j2} X_2 + \cdots + \beta_{jn} X_n}}
+$$
+
+with $Y \sim \text{Multinomial}(\boldsymbol{\rho})$ where $\boldsymbol{\rho} = (\rho_1, \rho_2, \ldots, \rho_K)$ are the probabilities above.
+
 
