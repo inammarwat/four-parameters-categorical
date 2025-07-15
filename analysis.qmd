@@ -1,0 +1,17 @@
+---
+title: "Four Parameters Categorical"
+format: html
+author: "Inam Khan"
+execute: 
+  echo: false
+---
+
+```{r}
+#| message: false
+
+library(tidyverse)
+library(primer.data)
+```
+
+Voting behavior is influenced by many demographic factors, with gender often playing a central role in political preferences. Using data from the 1992 American National Election Studies survey, which includes 46,838 observations from across the United States, we examine how voting choices for Clinton, Bush, and Perot varied between men and women.
+
