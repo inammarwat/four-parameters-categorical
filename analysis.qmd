@@ -40,7 +40,6 @@ fit_nes <- multinom_reg(engine = "nnet") |>
   fit(pres_vote ~ sex, data = nes_92)
 ```
 
-
 ```{r}
 #| label: vote-prob-plot
 #| fig-width: 8
