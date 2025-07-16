@@ -99,7 +99,16 @@ window.Quarto = {
 </header>
 
 
-<p>Understanding how voter preference varies by gender can help candidates tailor their campaign strategies more effectively. Using data from the 1992 National Election Studies survey, we explore the relationship between voter choice and sex in the U.S. presidential election. We model voter preference as a multinomial function of sex, using a logistic link to estimate the probability of choosing each candidate. A potential limitation of our model is that survey respondents may not fully reflect the broader voting population, which could affect the generalizability of our findings.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/vote-prob-plot-1.png" class="img-fluid figure-img" width="768"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Understanding how voter preference varies by gender can help candidates tailor their campaign strategies more effectively. Using data from the 1992 National Election Studies survey, we explore the relationship between voter choice and sex in the U.S. presidential election. We model voter preference as a multinomial function of sex, using a logistic link to estimate the probability of choosing each candidate. A potential limitation of our model is that survey respondents may not fully reflect the broader voting population, which could affect the generalizability of our findings. Our results suggest that the estimated probability of a woman voting for Clinton was about 52.5%, with a 95% confidence interval ranging from 49.2% to 55.8%.</p>
 <p><span class="math display">\[
 P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \beta_{kn} X_n}}{\sum_{j=1}^{K} e^{\beta_{j0} + \beta_{j1} X_1 + \beta_{j2} X_2 + \cdots + \beta_{jn} X_n}}
 \]</span></p>
@@ -115,23 +124,23 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
 \]</span></p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="xdbneomcmp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#xdbneomcmp table {
+<div id="qaauwcqntd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qaauwcqntd table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#xdbneomcmp thead, #xdbneomcmp tbody, #xdbneomcmp tfoot, #xdbneomcmp tr, #xdbneomcmp td, #xdbneomcmp th {
+#qaauwcqntd thead, #qaauwcqntd tbody, #qaauwcqntd tfoot, #qaauwcqntd tr, #qaauwcqntd td, #qaauwcqntd th {
   border-style: none;
 }
 
-#xdbneomcmp p {
+#qaauwcqntd p {
   margin: 0;
   padding: 0;
 }
 
-#xdbneomcmp .gt_table {
+#qaauwcqntd .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -157,12 +166,12 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-left-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_caption {
+#qaauwcqntd .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#xdbneomcmp .gt_title {
+#qaauwcqntd .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -174,7 +183,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-bottom-width: 0;
 }
 
-#xdbneomcmp .gt_subtitle {
+#qaauwcqntd .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -186,7 +195,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-top-width: 0;
 }
 
-#xdbneomcmp .gt_heading {
+#qaauwcqntd .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -198,13 +207,13 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-right-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_bottom_border {
+#qaauwcqntd .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_col_headings {
+#qaauwcqntd .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -219,7 +228,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-right-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_col_heading {
+#qaauwcqntd .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -239,7 +248,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   overflow-x: hidden;
 }
 
-#xdbneomcmp .gt_column_spanner_outer {
+#qaauwcqntd .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -251,15 +260,15 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   padding-right: 4px;
 }
 
-#xdbneomcmp .gt_column_spanner_outer:first-child {
+#qaauwcqntd .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#xdbneomcmp .gt_column_spanner_outer:last-child {
+#qaauwcqntd .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#xdbneomcmp .gt_column_spanner {
+#qaauwcqntd .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -271,11 +280,11 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   width: 100%;
 }
 
-#xdbneomcmp .gt_spanner_row {
+#qaauwcqntd .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#xdbneomcmp .gt_group_heading {
+#qaauwcqntd .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -301,7 +310,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   text-align: left;
 }
 
-#xdbneomcmp .gt_empty_group_heading {
+#qaauwcqntd .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -316,15 +325,15 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   vertical-align: middle;
 }
 
-#xdbneomcmp .gt_from_md > :first-child {
+#qaauwcqntd .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#xdbneomcmp .gt_from_md > :last-child {
+#qaauwcqntd .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#xdbneomcmp .gt_row {
+#qaauwcqntd .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -343,7 +352,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   overflow-x: hidden;
 }
 
-#xdbneomcmp .gt_stub {
+#qaauwcqntd .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -356,7 +365,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   padding-right: 5px;
 }
 
-#xdbneomcmp .gt_stub_row_group {
+#qaauwcqntd .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -370,15 +379,15 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   vertical-align: top;
 }
 
-#xdbneomcmp .gt_row_group_first td {
+#qaauwcqntd .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#xdbneomcmp .gt_row_group_first th {
+#qaauwcqntd .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#xdbneomcmp .gt_summary_row {
+#qaauwcqntd .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -388,16 +397,16 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   padding-right: 5px;
 }
 
-#xdbneomcmp .gt_first_summary_row {
+#qaauwcqntd .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_first_summary_row.thick {
+#qaauwcqntd .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#xdbneomcmp .gt_last_summary_row {
+#qaauwcqntd .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -407,7 +416,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-bottom-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_grand_summary_row {
+#qaauwcqntd .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -417,7 +426,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   padding-right: 5px;
 }
 
-#xdbneomcmp .gt_first_grand_summary_row {
+#qaauwcqntd .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -427,7 +436,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-top-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_last_grand_summary_row_top {
+#qaauwcqntd .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -437,11 +446,11 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-bottom-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_striped {
+#qaauwcqntd .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#xdbneomcmp .gt_table_body {
+#qaauwcqntd .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -450,7 +459,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-bottom-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_footnotes {
+#qaauwcqntd .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -464,7 +473,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-right-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_footnote {
+#qaauwcqntd .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -473,7 +482,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   padding-right: 5px;
 }
 
-#xdbneomcmp .gt_sourcenotes {
+#qaauwcqntd .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -487,7 +496,7 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   border-right-color: #D3D3D3;
 }
 
-#xdbneomcmp .gt_sourcenote {
+#qaauwcqntd .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -495,72 +504,72 @@ P(Y = k) = \frac{e^{\beta_{k0} + \beta_{k1} X_1 + \beta_{k2} X_2 + \cdots + \bet
   padding-right: 5px;
 }
 
-#xdbneomcmp .gt_left {
+#qaauwcqntd .gt_left {
   text-align: left;
 }
 
-#xdbneomcmp .gt_center {
+#qaauwcqntd .gt_center {
   text-align: center;
 }
 
-#xdbneomcmp .gt_right {
+#qaauwcqntd .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#xdbneomcmp .gt_font_normal {
+#qaauwcqntd .gt_font_normal {
   font-weight: normal;
 }
 
-#xdbneomcmp .gt_font_bold {
+#qaauwcqntd .gt_font_bold {
   font-weight: bold;
 }
 
-#xdbneomcmp .gt_font_italic {
+#qaauwcqntd .gt_font_italic {
   font-style: italic;
 }
 
-#xdbneomcmp .gt_super {
+#qaauwcqntd .gt_super {
   font-size: 65%;
 }
 
-#xdbneomcmp .gt_footnote_marks {
+#qaauwcqntd .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#xdbneomcmp .gt_asterisk {
+#qaauwcqntd .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#xdbneomcmp .gt_indent_1 {
+#qaauwcqntd .gt_indent_1 {
   text-indent: 5px;
 }
 
-#xdbneomcmp .gt_indent_2 {
+#qaauwcqntd .gt_indent_2 {
   text-indent: 10px;
 }
 
-#xdbneomcmp .gt_indent_3 {
+#qaauwcqntd .gt_indent_3 {
   text-indent: 15px;
 }
 
-#xdbneomcmp .gt_indent_4 {
+#qaauwcqntd .gt_indent_4 {
   text-indent: 20px;
 }
 
-#xdbneomcmp .gt_indent_5 {
+#qaauwcqntd .gt_indent_5 {
   text-indent: 25px;
 }
 
-#xdbneomcmp .katex-display {
+#qaauwcqntd .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#xdbneomcmp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#qaauwcqntd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
