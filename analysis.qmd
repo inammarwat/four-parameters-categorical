@@ -24,4 +24,39 @@ $$
 
 with $Y \sim \text{Multinomial}(\boldsymbol{\rho})$ where $\boldsymbol{\rho} = (\rho_1, \rho_2, \ldots, \rho_K)$ are the probabilities above.
 
+$$
+\hat{P}(\text{pres\_vote} = \text{Clinton}) = \frac{e^{0.455 - 0.255 \cdot \text{sex}_{\text{Male}}}}{1 + e^{0.455 - 0.255 \cdot \text{sex}_{\text{Male}}} + e^{-0.852 + 0.420 \cdot \text{sex}_{\text{Male}}}}
+$$
+
+$$
+\hat{P}(\text{pres\_vote} = \text{Perot}) = \frac{e^{-0.852 + 0.420 \cdot \text{sex}_{\text{Male}}}}{1 + e^{0.455 - 0.255 \cdot \text{sex}_{\text{Male}}} + e^{-0.852 + 0.420 \cdot \text{sex}_{\text{Male}}}}
+$$
+
+$$
+\hat{P}(\text{pres\_vote} = \text{Bush}) = 1 - \hat{P}(\text{Clinton}) - \hat{P}(\text{Perot})
+$$
+
+```{r}
+#| label: prepare-data
+#| cache: true
+
+nes_92 <- nes |> 
+  filter(year == 1992) |> 
+  select(sex, pres_vote) |> 
+  drop_na() |> 
+  mutate(pres_vote = as.factor(case_when(
+    pres_vote == "Democrat" ~ "Clinton",
+    pres_vote == "Republican" ~ "Bush",
+    pres_vote == "Third Party" ~ "Perot"
+  )))
+```
+```{r}
+#| label: fit-model
+#| cache: true
+
+fit_nes <- multinom_reg(engine = "nnet") |>
+  fit(pres_vote ~ sex, data = nes_92)
+```
+
+
 
