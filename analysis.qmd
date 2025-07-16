@@ -4,18 +4,22 @@ format: html
 author: "Inam Khan"
 execute: 
   echo: false
+  message: false
+  warning: false
 ---
 
 ```{r}
-#| message: false
 
 library(tidyverse)
 library(primer.data)
 library(tidymodels)
 library(broom)
+library(gt)
+library(broom)  # for tidy()
 ```
 
-Understanding how voter preference varies by gender can help candidates tailor their campaign strategies more effectively. Using data from the 1992 National Election Studies survey, we explore the relationship between voter choice and sex in the U.S. presidential election. A potential limitation of our model is that survey respondents may not fully reflect the broader voting population, which could affect the generalizability of our findings.
+Understanding how voter preference varies by gender can help candidates tailor their campaign strategies more effectively. Using data from the 1992 National Election Studies survey, we explore the relationship between voter choice and sex in the U.S. presidential election. We model voter preference as a multinomial function of sex, using a logistic link to estimate the probability of choosing each candidate. A potential limitation of our model is that survey respondents may not fully reflect the broader voting population, which could affect the generalizability of our findings.
+
 
 
 $$
@@ -58,5 +62,26 @@ fit_nes <- multinom_reg(engine = "nnet") |>
   fit(pres_vote ~ sex, data = nes_92)
 ```
 
+```{r}
+#| label: tidy-table
 
+tidy(fit_nes, conf.int = TRUE) |>
+  select(y.level, term, estimate, conf.low, conf.high) |>
+  mutate(across(c(estimate, conf.low, conf.high), round, digits = 3)) |>
+  gt() |>
+  tab_header(
+    title = "Multinomial Logistic Regression: Voter Preference by Sex",
+    subtitle = "1992 U.S. Presidential Election (NES Data)"
+  ) |>
+  cols_label(
+    y.level = "Vote Choice (vs. Bush)",
+    term = "Term",
+    estimate = "Estimate",
+    conf.low = "95% CI (Lower)",
+    conf.high = "95% CI (Upper)"
+  ) |>
+  tab_source_note(
+    source_note = "Source: National Election Studies (NES) 1992"
+  )
+```
 
